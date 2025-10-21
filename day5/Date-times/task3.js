@@ -1,14 +1,11 @@
+function daysBetween(date1, date2) {
+    const d1 = new Date(date1)
+    const d2 = new Date(date2)
 
-// function daysBetween(date1, date2) {
-//     let day1 = date1.toDateString()
-//     let day2 = date2
+    const differenceMills = Math.abs(d2 - d1)
+    const days = differenceMills / (1000 * 60 * 60 * 24)
 
-//     console.log(day1 - day2)
-// }
+    console.log(days)
+}
 
-// let date1 = new Date()
-// let date2 = 2025-10-16
-
-// daysBetween(new Date(), date2)
-
-// 
+daysBetween('2025-05-02', '2025-10-23')
