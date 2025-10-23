@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Scrollable Container with Scroll Progress</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="task7.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <h1>Scrollable container</h1>
+             <div id="scroller" class="scroller" tabindex="0" aria-label="Scrollable text container">
+                <h2>Random text</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer convallis neque nec neque dapibus, sit amet convallis mauris faucibus...</p>
+                <p>Suspendisse potenti. Vivamus sed magna vel lorem ornare fermentum...</p>
+                <p>Phasellus et mi vitae nibh bibendum auctor...</p>
+                <p>Vestibulum a est ac ipsum congue vestibulum...</p>
+                <p>Etiam vehicula, arcu sed posuere convallis...</p>
+                <p>Integer at felis at nunc elementum hendrerit...</p>
+                <p>Morbi non dui non nibh efficitur tempor...</p>
+                <p>Sed nec tortor ac ipsum ultrices suscipit...</p>
+                <p>Donec vitae velit vitae libero pretium tempus...</p>
+                <p>Phasellus at leo sit amet augue tincidunt vehicula...</p>
+                <p>Fusce id tempor dolor. Vivamus vel urna nec mi pellentesque...</p>
+                <p>Ut dignissim, risus id efficitur tempus...</p>
+                <p>Nam a dolor non eros laoreet congue...</p>
+                </div>
+
+                <div class="progress-wrap" aria-hidden="false">
+                <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                    <div id="progressFill" class="progress-fill">0%</div>
+                </div>
+                <div class="meta">Scroll progress (container) — <span id="metaPercent">0%</span></div>
+                </div>
+            </div>
+        </div>
+        <script src="task7.js"></script>
+    </body>
+</html>
