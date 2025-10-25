@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>image gallery</title>
+        <link rel="stylesheet" href="task10.css">
     </head>
     <body>
-        <div>
-            <h5>Upload a image</h5>
-            <input id="inputFile" type="file">
-            <p id="images"></p>
+        <div class="gallery-container">
+            <h2>Image Gallery</h2>
+            <input id="imageInput" type="file" accept="image/*" multiple>
+            <button id="deleteBtn" disabled>Delete Selected</button>
+            <p id="emptyMessage">Uploaded images</p>
+            <div id="gallery" class="gallery"></div>
         </div>
+        <script src="task10.js"></script>
     </body>
-    <script src="task10.js"></script>
+    
 </html>
