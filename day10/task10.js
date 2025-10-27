@@ -4,13 +4,13 @@ function longestCommonPrefix(strings){
     let firstItem = splitted[0].split("")
     let lastItem = splitted[splitted.length - 1].split("")
     let result = []
-    for(let i = 0; i < splitted.length; i++){
+    for(let i = 0; i < firstItem.length; i++){
         if(firstItem[i] === lastItem[i]){
             result.push(firstItem[i])
         }
         else{
             if(result.length === 0){
-                return `""`
+                return ""
             }
             else
             return result.toString().replaceAll(",", "");

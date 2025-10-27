@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Hover</title>
+    </head>
+    <style>
+        .ulContainer{
+            max-width: 50%;
+            position: relative;
+        }
+        .tooltip{
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            max-width: 100px;
+        }
+    </style>
+    <body>
+        <div>
+            <h2>Hover Over Every Item</h2>
+            <ul class="ulContainer" id="ItemContainer">
+                <li id="item1" class="tooltip">hover over me it is item 1</li>
+                <li id="item1Details" style="list-style: none;"></li>
+                <li id="item2" class="tooltip">hover over me it is item 2</li>
+                <li id="item2Details" style="list-style: none;"></li>
+                <li id="item3" class="tooltip">hover over me it is item 3</li>
+                <li id="item3Details" style="list-style: none;"></li>
+                
+            </ul>
+        </div>
+        <script src="task2.js"></script>
+    </body>
+</html>

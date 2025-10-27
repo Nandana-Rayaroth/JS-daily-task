@@ -3,15 +3,15 @@ function isValidEmail(str){
 
     const Indexat = str.indexOf("@")
     const IndexDot = str.lastIndexOf(".")
+    if (Indexat === -1 || IndexDot === -1) return false
 
-    let splitted = str.split("")
-    for(let i of splitted){
-        let upper = i.toUpperCase()
-        if(upper !== '@' && upper !== '.')
-        if(upper === i) return false
-    }
-
-    // if(Indexat === -1 || IndexDot === -1) return false
+    // let splitted = str.split("")
+    // for(let i of splitted){
+    //     let upper = i.toUpperCase()
+    //     if(upper !== '@' && upper !== '.')
+    //     if(upper === i) return false
+    // }
+    
     if(Indexat > IndexDot) return false
     if(Indexat === 0 || IndexDot === str.length - 1) return false
     if(IndexDot === 0 || Indexat === str.length - 1) return false
