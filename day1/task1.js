@@ -2,46 +2,46 @@
 const array = [1, 2, 3, 4];
 
 // map
-
-function conditionFn(array) {
-  let result = [];
-  for (let i = 0; i < array.length; i++) {
-    result.push(array[i] * 2);
+function myMap(arr, callback){
+  let result = []
+  for(let i = 0; i < arr.length; i++){
+    result.push(callback(arr[i]))
   }
-  return result;
+  return result
 }
-function myMap(array, callback) {
-  return callback(array);
+function doubler(value) {
+  return value = value * 2
 }
-console.log(myMap(array, conditionFn));
+console.log(myMap(array, doubler))
+
+
 
 // filter
-
-function conditionalFilter(array){
-    let result = [];
-    for(let i = 0; i < array.length; i++) {
-        if(array[i] % 2 === 0){
-            result.push(array[i]);
-        }
+function myFilter(arr, callback) {
+  let result = []
+  for(let i = 0; i < arr.length; i++){
+    if(callback(arr[i])){
+      result.push(arr[i])
     }
-    return result
-    
+  }
+  return result
 }
-function myFilter(array, callback) {   
-    return (callback(array))
+function greaterTen(value){
+  if(value % 2 === 0)
+  return value
 }
-console.log(myFilter(array, conditionalFilter))
+console.log(myFilter(array, greaterTen))
+
 
 // reduce
-
-function conditionalReduce(array, InitialValue) {
-  let sum = 0;
-  for (let i = InitialValue; i < array.length; i++) {
-    sum = sum + array[i];
+function myReduce(arr, callback, initialValue = 0){
+  let result = initialValue
+  for(let i = 0; i < arr.length; i++){
+    result = callback(result, arr[i])
   }
-  return sum;
+  return result
 }
-function myReduce(array, callback, InitialValue) {
-  return callback(array, InitialValue);
+function Sum(val1, val2){
+  return val1 + val2
 }
-console.log(myReduce(array, conditionalReduce, 0));
+console.log(myReduce(array, Sum))

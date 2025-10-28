@@ -34,7 +34,7 @@ function IncreassOrder(arr){
         console.log("Maximum 50 input")
     }
 }
-IncreassOrder([6, 9, 2, 0, 5, 7, 8, 2, 8])
+IncreassOrder([6, 9, 2, 0, 5, 7, 8, 2, 8])                                   
 IncreassOrder([10, 20, 15, 30, 22, 40])
 IncreassOrder([8, 3, 12, 89, 0, 6])
 IncreassOrder([23, 79, 34, 89, 45, 90, 45, 67])
