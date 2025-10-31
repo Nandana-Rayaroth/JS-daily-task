@@ -9,6 +9,17 @@ let obj = {
   dataTypes: ["string", "number", "boolean", "object", "null", "undefined"],
 };
 
-console.log(deepClone(obj))
+// console.log(deepClone(obj))
+
+const TestCase = [
+  {
+    id: 1,
+    input: { name: "John", mark: 34 },
+    output: { name: "John", mark: 34 },
+  },
+];
+TestCase.forEach(({input, output}) => {
+  
+})
 
 // 

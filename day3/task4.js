@@ -13,7 +13,6 @@ function Replace(arr1, arr2, positin) {
     }
     flatted = temp.flat()
     return(flatted)
-
 }
 
 console.log(Replace([1, 2, 3], [4, 5, 6], 2))

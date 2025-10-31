@@ -1,5 +1,4 @@
 
-
 function frequanceFounder(str) {
     if(typeof(str) !== "string") return 'Invalid input'
     str = str.trim().replaceAll(/\s+/g, "");
