@@ -17,4 +17,5 @@ function FindOut(arr) {
 FindOut([2, 3, 4, 6])
 FindOut([1, 2, 4, 5])
 
+
 // 

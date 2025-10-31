@@ -22,3 +22,4 @@ function Inverter(obj) {
 }
 
 Inverter({a: 1, b: 2}) 
+Inverter({b: 3, c: 1, d: 4})

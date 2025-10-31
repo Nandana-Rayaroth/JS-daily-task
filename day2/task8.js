@@ -9,21 +9,16 @@ function missingNumber(arr) {
     if(arr.length === 0 || (counter < 0) ) return 'Invalid input'
 
     if (counter - 1 === starter && !arr.includes(starter)) {
-        // return starter;
         flag = flag + 1
     }
 
     for(let i = 0; i <= arr.length; i++) {
         if(!arr.includes(counter)){
-            // return counter
             temp.push(counter)
             flag === 1 ? flag = flag + 1 : flag = 0
         }
         counter = counter + 1;
     }
-    // console.log(flag)
-    // console.log(temp.length)
-    // console.log(arr.length + 1 === arr[arr.length - 1]);
     if(flag === 1 || (flag >1 && temp.length === 0)){
         return starter
     }

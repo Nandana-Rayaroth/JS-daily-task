@@ -22,4 +22,16 @@ getTranspose([
     [7, 1, 5],
 ])
 
+// const TestCase = [
+//     {
+//         id : 1,
+//         input : [[2, 9, 0] [7, 1, 5]],
+//         output : [ [2, 7], [9 , 1], [0, 5]]
+//     }
+// ]
+// TestCase.forEach(({input, output}) => {
+//     let result = getTranspose(input)
+//     if(result === output) console.log("Passed")
+//     else console.log("Failed")
+// })
 // 

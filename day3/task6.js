@@ -12,7 +12,7 @@ function getQueue() {
                 return "queue is empty"
             }
             else{
-               return queue.pop
+               return queue.pop()
             }
         },
         peek() {
@@ -27,4 +27,6 @@ function getQueue() {
 }
 
 const myQueue = getQueue()
-myQueue.enqueue('1')
+console.log(myQueue.enqueue('1'))
+console.log(myQueue.enqueue('2'))
+console.log(myQueue.dequeue())

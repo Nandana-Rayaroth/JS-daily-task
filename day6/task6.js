@@ -1,5 +1,6 @@
 
 function passWordChecker(str){
+    if(typeof str !== "string" || str.length <= 0 || str.trim() === "") return 'Invalid input'
     let length = str.split("").length
     let splitted = str.split("")
     let Password
@@ -53,11 +54,98 @@ function passWordChecker(str){
     else{
         Password = "password is weak"
     }
-    console.log(Password)
+    return(Password)
 }
 
-passWordChecker('egwrerge')
-passWordChecker('etrh')
-passWordChecker('Abi123@avfgs')
+// console.log(passWordChecker('egwrerge'))
+// console.log(passWordChecker('etrh'))
+// console.log(passWordChecker('Abi123@avfgs'))
+
+const TestCase = [
+  {
+    id: 1,
+    input: "egwrerge",
+    output:
+      "Not Strong, include Number, uppercase, lowercase, and special character",
+  },
+  {
+    id: 2,
+    input: "etrh",
+    output: "Password is Weak",
+  },
+  {
+    id: 3,
+    input: "Abi123@avfgs",
+    output: "Strong",
+  },
+  {
+    id: 4,
+    input: "wayanad kerala",
+    output:
+      "Not Strong, include Number, uppercase, lowercase, and special character",
+  },
+  {
+    id: 5,
+    input: "abcdefgh@",
+    output:
+      "Not Strong, include Number, uppercase, lowercase, and special character",
+  },
+  {
+    id: 6,
+    input: "abC@12",
+    output: "Medium",
+  },
+  {
+    id: 7,
+    input: "Ab@1",
+    output: "Password is Weak",
+  },
+  {
+    id: 8,
+    input : 1234,
+    output : 'Invalid input'
+  },
+  {
+    id: 9,
+    input : "    ",
+    output : 'Invalid input'
+  },
+  {
+    id : 10,
+    input : [],
+    output : 'Invalid input'
+  },
+  {
+    id: 11,
+    input : [" ", " ", " "],
+    output : 'Invalid input'
+  },
+  {
+    id : 12,
+    input : [{}],
+    output : 'Invalid input'
+  },
+  {
+    id : 13,
+    input : [{greet : "hello"}],
+    output : 'Invalid input'
+  },
+  {
+    id : 14,
+    input : {},
+    output : 'Invalid input'
+  },
+  {
+    id : 15,
+    input : null,
+    output : 'Invalid input'
+  }
+];
+
+TestCase.forEach(({input, output}) => {
+    let result = passWordChecker(input)
+    if(result === output) console.log("Passed")
+    else console.log("Failed"); 
+})
 
 // 
