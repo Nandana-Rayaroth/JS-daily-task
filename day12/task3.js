@@ -1,5 +1,8 @@
 function TargetSubset(arr, target){
-    if(!Array.isArray(arr) || arr.length === 0 || typeof(target) !== "number" || target <= 0) return 'Invalid input'
+    if(!Array.isArray(arr) || arr.length === 0 || typeof(target) !== "number" || target <= 0){
+      console.log("Invalid input")
+      return
+    } 
     let temp = arr.sort((a, b) => a - b)
     
     let count
@@ -8,7 +11,7 @@ function TargetSubset(arr, target){
     for(let i = 0; i < arr.length; i++){
         let random = Math.floor(Math.random(i - temp.length) * (temp.length))
         
-        // if(i < random){
+        if(i < random){
           if (temp[i] < target) {
             if (random !== i) {
               count = temp[i] + temp[random];
@@ -22,7 +25,7 @@ function TargetSubset(arr, target){
               }
             }
           }
-        // }
+        }
         else if (temp[i] === target) {
           result.push([temp[i]]);
         }
@@ -33,3 +36,4 @@ function TargetSubset(arr, target){
 }
 
 TargetSubset([2, 3, 5], 5)
+// TargetSubset([2, 4, 5, 7, 1], 6)
