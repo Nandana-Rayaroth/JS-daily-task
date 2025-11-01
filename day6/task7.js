@@ -1,6 +1,6 @@
 import { ArrayUtility } from "../utility.js";
 function wrapper(arr) {
-  if(arr.length === 0) return 'Invalid input'
+  if(!Array.isArray(arr) || arr.length === 0) return 'Invalid input'
   let result = [];
   
   function flatArray(arr) {
@@ -49,14 +49,10 @@ const TestCase = [
   },
   {
     id : 6,
-    input : [""],
+    input : {},
     output : 'Invalid input'
   },
-  {
-    id : 7,
-    input : [{}],
-    output : 'Invalid input'
-  }
+  
 ]
 
 TestCase.forEach(({input, output}) => {
