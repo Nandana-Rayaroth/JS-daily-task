@@ -52,7 +52,51 @@ const TestCase = [
     input : {},
     output : 'Invalid input'
   },
-  
+  {
+    id : 7,
+    input : "",
+    output : "Invalid input"
+  },
+  {
+    id : 8,
+    input : "hello",
+    output : 'Invalid input'
+  },
+  {
+    id : 9,
+    input : "   ",
+    output : 'Invalid input'
+  },
+  {
+    id : 10,
+    input : undefined,
+    output : 'Invalid input'
+  },
+  {
+    id : 11,
+    input : null,
+    output : 'Invalid input'
+  },
+  {
+    id : 12,
+    input : 12344,
+    output : 'Invalid input'
+  },
+  {
+    id : 13,
+    input : true,
+    output : 'Invalid input'
+  },
+  {
+    id : 14,
+    input : 123*2,
+    output : 'Invalid input'
+  },
+  {
+    id : 15,
+    input : '      ',
+    output : 'Invalid input'
+  }
 ]
 
 TestCase.forEach(({input, output}) => {

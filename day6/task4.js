@@ -107,7 +107,7 @@ const TestCase = [
         id : 15,
         input : true,
         output : 'Invalid input'
-    }
+    },
 ]
 
 TestCase.forEach(({input, output}) => {

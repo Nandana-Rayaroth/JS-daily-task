@@ -1,5 +1,5 @@
 function isValidEmail(str){
-    if(!str || str.includes(" ")) return false
+    if(typeof(str) !== 'string' || !str || str.includes(" ") || str.length === 0) return false
 
     const Indexat = str.indexOf("@")
     const IndexDot = str.lastIndexOf(".")
@@ -23,7 +23,91 @@ function isValidEmail(str){
     
 }
 
-console.log(isValidEmail("nandana@gmail.com"))
-console.log(isValidEmail("nan.com"))
-console.log(isValidEmail("@nandana."))
-console.log(isValidEmail("knjWui.com"))
+// console.log(isValidEmail("nandana@gmail.com"))
+// console.log(isValidEmail("nan.com"))
+// console.log(isValidEmail("@nandana."))
+// console.log(isValidEmail("knjWui.com"))
+
+const TestCase = [
+  {
+    id: 1,
+    input: "nandana@gmail.com",
+    output: true,
+  },
+  {
+    id: 2,
+    input: "nan.com",
+    output: false,
+  },
+  {
+    id: 3,
+    input: "@nandana.",
+    output: false,
+  },
+  {
+    id: 4,
+    input: "knjWui.com",
+    output : false
+  },
+  {
+    id: 5,
+    input : "",
+    output : false
+  },
+  {
+    id: 6,
+    input : "   ",
+    output: false
+  },
+  {
+    id: 7,
+    input : "John 123",
+    output : false
+  },
+  {
+    id: 8,
+    input : "John@123.com",
+    output: true
+  },
+  {
+    id: 9,
+    input: 1234,
+    output : false
+  },
+  {
+    id: 10,
+    input: [1,23,4],
+    output: false
+  },
+  {
+    id: 11,
+    input: [],
+    output: false
+  },
+  {
+    id: 12,
+    input: {},
+    output: false
+  },
+  {
+    id: 13,
+    input : {greet: "hello"},
+    output : false
+  },
+  {
+    id: 14,
+    input : [{}],
+    output : false
+  },
+  {
+    id: 15,
+    input : "hi hello",
+    output : false
+  }
+];
+
+TestCase.forEach(({input, output}) => {
+    let result = isValidEmail(input)
+    if(result === output) console.log("Passed")
+    else console.log("Failed")
+})

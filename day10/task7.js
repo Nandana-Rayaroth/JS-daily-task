@@ -35,8 +35,15 @@ const tens = [
 ]
 
 function numberToText(num) {
+    if(!Number.isInteger(num)) return 'Invalid input'
+    if(num >= 20000) return 'Out of the range'
     if(num === 0) return "zero"
     let text = ""
+
+    if(num < 0){
+        text += "Negative "
+        num = Math.abs(num)
+    }
 
     if(num >= 1000){
         let thousand = Math.floor(num/1000)
@@ -55,7 +62,7 @@ function numberToText(num) {
 
         num = num % 100
         if(num > 0){
-            text += " and "
+            text += " and"
         }
     }
     if(num > 0){
@@ -72,10 +79,91 @@ function numberToText(num) {
     }
     return (text.charAt(0).toUpperCase()+text.slice(1))
 }
-console.log(numberToText(152))
-console.log(numberToText(1256))
-console.log(numberToText(2845))
-console.log(numberToText(10034))
+
+const TestCase = [
+  {
+    id: 1,
+    input: 745,
+    output: "Seven hundred and forty five",
+  },
+  {
+    id: 2,
+    input: 12345,
+    output: "Twelve thousand and three hundred and forty five",
+  },
+  {
+    id: 3,
+    input: 1111,
+    output: "One thousand and one hundred and eleven",
+  },
+  {
+    id: 4,
+    input: -100,
+    output: "Negative one hundred",
+  },
+  {
+    id: 5,
+    input: 11.34,
+    output: "Invalid input",
+  },
+  {
+    id: 6,
+    input: 1234.452,
+    output: "Invalid input",
+  },
+  {
+    id: 7,
+    input: 20000,
+    output: "Out of the range",
+  },
+  {
+    id: 8,
+    input: "hello",
+    output: "Invalid input",
+  },
+  {
+    id: 9,
+    input: [12, 34, 56],
+    output: "Invalid input",
+  },
+  {
+    id: 10,
+    input: [],
+    output: "Invalid input",
+  },
+  {
+    id: 11,
+    input: {},
+    output: "Invalid input",
+  },
+  {
+    id: 12,
+    input: { greet: "hello" },
+    output: "Invalid input",
+  },
+  {
+    id: 13,
+    input: [" ", " ", " "],
+    output: "Invalid input",
+  },
+  {
+    id: 14,
+    input: [{}],
+    output: "Invalid input",
+  },
+  {
+    id: 15,
+    input: ["hello"],
+    output: "Invalid input",
+  },
+];
+
+TestCase.forEach(({ input, output }) => {
+  let result = numberToText(input);
+  if (result === output) console.log("Passed");
+  else console.log("Failed");
+});
+
 
 
 // 

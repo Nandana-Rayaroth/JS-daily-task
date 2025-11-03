@@ -119,6 +119,6 @@ const TestCase = [
 ];
 TestCase.forEach(({ input, output }) => {
   let result = longer(input);
-  if (JSON.stringify(result) === JSON.stringify(output)) console.log("Passed");
+  if (result === output) console.log("Passed");
   else console.log("Failed");
 });

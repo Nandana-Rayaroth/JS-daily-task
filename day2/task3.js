@@ -103,8 +103,6 @@ const TestCases = [
 ];
 TestCases.forEach(({ input, output }) => {
   let result = EvenList(input);
-  // if (JSON.stringify(result) === JSON.stringify(output)) console.log("Pass");
-  // else console.log("Failed");
   let text = ArrayUtility(result, output)
   console.log(text)
 });

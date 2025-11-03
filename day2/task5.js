@@ -1,4 +1,4 @@
-
+import { objectEquality } from "../objectutility.js";
 function frequanceFounder(str) {
     if(typeof(str) !== "string") return 'Invalid input'
     str = str.trim().replaceAll(/\s+/g, "");
@@ -99,8 +99,8 @@ const TestCase = [
 ]
 TestCase.forEach(({input, output}) => {
     let result = frequanceFounder(input)
-    if(JSON.stringify(result) === JSON.stringify(output)) console.log("Passed") 
-    else console.log("Failed"); 
+    let flag = objectEquality(result, output)
+    console.log(flag)
 })
 
 // 

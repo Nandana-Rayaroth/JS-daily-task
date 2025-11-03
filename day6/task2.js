@@ -1,4 +1,4 @@
-
+import { objectEquality } from "../objectutility.js";
 function WordFrequency(senctance) {
     if(typeof senctance !== "string" || senctance.length === 0 || senctance.trim() === "") return 'Invalid input'
 
@@ -95,8 +95,8 @@ const TestCase = [
 
 TestCase.forEach(({input, output}) => {
     let result = WordFrequency(input)
-    if(JSON.stringify(result) === JSON.stringify(output)) console.log("Passed")
-    else console.log("Failed");
+    let flag = objectEquality(result, output)
+    console.log(flag)
 })
 
 // 
