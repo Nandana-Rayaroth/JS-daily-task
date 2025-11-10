@@ -47,3 +47,4 @@ export function objectEquality(obj1, obj2){
 // console.log(objectEquality({ a: 1, b: 2 }, { b: 3, c: 4 }));
 // console.log(objectEquality({ a: 1, b: 2 }, { b: 2, a: 1 }));
 // console.log(objectEquality({ a: 1, b: 2 }, { a: 1, b: 2, d: 3 }));
+// console.log(objectEquality({x: 1, y:{z:2}}, {x: 1, y:{z:3}}))
