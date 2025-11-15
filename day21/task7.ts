@@ -8,7 +8,7 @@ export function validEmail(arr : string[]) : string | string[]{
             for(let j:number = 0; j < str.length; j++){
                 if(str[j] === '@') atIndx.push(j)
                 if(str[j] === " ") break
-                if(str[j] === '.'&&str[i+1] === '.') break
+                if(str[j] === '.'&&str[j+1] === '.') break
                 if(j === str.length - 1) firstflag = true
             }
             
