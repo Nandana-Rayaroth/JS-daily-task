@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Tooltip</title>
+    </head>
+    <body>
+        <style>
+            .tooltip{
+                position: relative;
+                list-style: none;
+            }
+            .tooltip-parentext{
+                text-overflow: ellipsis;
+                max-width: 96px;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+            .tooltip-text{
+                visibility: hidden;
+                background-color: black;
+                color: white;
+                max-width: 350px;
+                padding: 4px;
+                position: absolute;
+               
+            }
+            .tooltip:hover .tooltip-text{
+                visibility: visible;
+            }
+        </style>
+        <ul class="ulContainer">
+            <li class="tooltip"><p class="tooltip-parentext">I'm hidden text</p>
+                <span class="tooltip-text">I'm hidden text i will show only if you hower me!</span>
+            </li>
+        </ul>
+    </body>
+</html>
