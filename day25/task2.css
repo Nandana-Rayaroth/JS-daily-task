@@ -1,0 +1,33 @@
+
+.image-silderlayover{
+    display: flex;
+    justify-content: center;
+}
+.images-container{
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+    /* overflow-x: scroll; */
+    overflow: hidden;
+    border: 4px solid white;
+    height: 100%;
+    width: 350px;
+    /* width: 500px; */
+}
+.image{
+    height: 400px;
+    width: 500px;
+}
+.btnContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 500px;
+    margin-top: 14px;
+}
+.PreBtn{
+    padding: 4px 8px;
+    background-color: rgb(137, 169, 197);
+    border: none;
+    border-radius: 6px;
+}
