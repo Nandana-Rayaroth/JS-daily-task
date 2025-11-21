@@ -1,0 +1,41 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+.menuiconContainer{
+    width: 30%;
+    background-color: rgb(42, 85, 165)
+}
+#menuicon{
+    display: block;
+}
+/* #closeicon{
+    display: none;
+} */
+/* .Barsetter{
+
+} */
+.dynamic{
+    display: none;
+    height: 100%;
+    width: 30%;
+    background-color: rgb(42, 85, 165);
+}
+.item{
+    padding: 4px;
+    margin-left: 30px;
+}
+
+#uparrow{
+    height: 15px;
+    width: 15px;
+    padding-left: 10px;
+    display: none;
+}
+#downarrow{
+    height: 15px;
+    width: 15px;
+    padding-left: 10px;
+    display: block;
+    
+}
