@@ -1,4 +1,4 @@
-
+/* 
 .image-silderlayover{
     display: flex;
     justify-content: center;
@@ -7,12 +7,10 @@
     display: flex;
     flex-direction: row;
     gap: 2px;
-    /* overflow-x: scroll; */
     overflow: hidden;
     border: 4px solid white;
     height: 100%;
     width: 350px;
-    /* width: 500px; */
 }
 .image{
     height: 400px;
@@ -30,4 +28,36 @@
     background-color: rgb(137, 169, 197);
     border: none;
     border-radius: 6px;
+} */
+
+.image-silderlayover{
+    width: 350px;
+    height: 400px;
+    margin: auto;
+    border: 4px solid white;
+    overflow: hidden;
+}
+.images-container{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.image{
+    width: 350px;
+    height: 400px;
+    object-fit: cover;
+    flex-shrink: 0;
+    /* display: block; */
+}
+.btnContainer{
+    display: flex;
+    justify-content: center;
+    gap: 225px;
+    margin-top: 20px;
+}
+.PreBtn{
+    padding: 8px 16px;
+    background-color: rgb(137, 169, 197);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
 }

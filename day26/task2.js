@@ -261,4 +261,9 @@ brands.addEventListener("mouseover", function(){
 })
 
 
+// document.querySelector(".navbar").addEventListener("mouseleave", () => {
+//   document
+//     .querySelectorAll(".dropdown")
+//     .forEach((d) => (d.style.display = "none"));
+// });
 

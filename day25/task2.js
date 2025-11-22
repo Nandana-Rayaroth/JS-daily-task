@@ -1,54 +1,59 @@
+
 let imageContainer = document.getElementById("imageContainer");
 let ImageOver = document.getElementById("image-silderlayover");
-const PrBtn = document.getElementsByClassName("PrBtn")
-let images = document.querySelectorAll(".image");
-let Length = images.length
-let index = 0
+let images = document.querySelectorAll(".image")
+let total = images.length
+let index = 1
+let interval
 
-function Next(){
-    index++;
-    for(let i = 0; i < Length; i++){
-         if (index === Length) {
-           index = 0;
-         }
-        if(i !== index){
-            images[i].style.display = "none"
-        }
-        else {
-            images[i].style.display = "block"
-        }
+let firstClone = images[0].cloneNode(true)
+let lastClone = images[total - 1].cloneNode(true)
+
+firstClone.id = "first-clone"
+lastClone.id = "last-clone"
+
+imageContainer.appendChild(firstClone)
+imageContainer.prepend(lastClone)
+
+let slideWidth = 350
+imageContainer.style.transform = `translateX(-${slideWidth * index}px)`
+
+function goToSlide(){
+    imageContainer.style.transition = "transform 0.5s ease-in-out"
+    imageContainer.style.transform = `translateX(-${slideWidth * index}px)`
+}
+
+function nextSlide(){
+    index++
+    goToSlide()
+}
+
+function prevSlide(){
+    index--
+    goToSlide()
+}
+
+imageContainer.addEventListener("transitionend", () => {
+    let images = document.querySelectorAll(".image")
+
+    if(images[index].id === "first-clone"){
+        imageContainer.style.transition = "none"
+        index = 1
+        imageContainer.style.transform = `translateX(-${slideWidth * index}px)`
     }
-}
 
-function Preview(){
-    index--;
-    for(let i = Length-1; i >= 0; i--){
-        if(index === -1){
-            index = Length - 1
-        }
-        if(i !== index){
-            images[i].style.display = "none"
-        }
-        else {
-            images[i].style.display = "block"
-        }
+    if(images[index].id === "last-clone"){
+        imageContainer.style.transition = "none"
+        index = total
+        imageContainer.style.transform = `translateX(-${slideWidth * index}px)`
     }
-    
+})
+
+function startAutoSlide(){
+    interval = setInterval(nextSlide, 3000)
 }
 
+ImageOver.addEventListener("mouseover", () => clearInterval(interval))
+ImageOver.addEventListener("mouseleave", startAutoSlide)
 
-function scrollAuto() {
-  let auto =  setInterval(Next, 3000);
-  ImageOver.addEventListener("mouseover", function () {
-    clearInterval(auto);
-  });
-  ImageOver.addEventListener("mouseleave", function(){
-    setInterval(Next, 3000)
-  })
-}
-scrollAuto()
-
-
-
-
-
+startAutoSlide()

@@ -1,4 +1,4 @@
-.MainContainer{
+/* .MainContainer{
     display: flex;
     height: 50px;
     width: 100%;
@@ -48,3 +48,82 @@ li{
     display: none;
     margin: 0px 0px 0px 40px;
 }
+
+
+
+ */
+
+
+ /* NAVBAR */
+.navbar {
+    width: 100%;
+    background: #405858;
+    /* padding: 12px 0; */
+    height: 50px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    list-style: none;
+    color: white;
+    font-family: sans-serif;
+    font-size: 18px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.menu-item {
+    position: relative; 
+    cursor: pointer;
+}
+
+/* FIRST DROPDOWN */
+.dropdown {
+    display: none;
+    position: absolute;
+    background: #f9eede;
+    color: #405858;
+    padding: 12px;
+    list-style: none;
+    top: 100%;
+    left: 0;
+    /* border-radius: 8px; */
+    min-width: 150px;
+}
+
+/* Show dropdown on hover */
+.menu-item:hover .dropdown {
+    display: block;
+}
+
+/* SUB ITEMS INSIDE FIRST DROPDOWN */
+.sub-item {
+    position: relative;
+    padding: 8px;
+    cursor: pointer;
+}
+
+/* SUB-DROPDOWN */
+.sub-dropdown {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 150px;
+    background: #fff6ec;
+    padding: 15px;
+    list-style: none;
+    /* border-radius: 8px; */
+    min-width: 140px;
+}
+
+/* Show sub-dropdown on hover */
+.sub-item:hover .sub-dropdown {
+    display: block;
+}
+

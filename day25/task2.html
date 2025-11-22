@@ -5,9 +5,7 @@
         <link rel="stylesheet" href="task2.css">
     </head>
     <body>
-        <div>
-            <h3 style="display: flex; justify-content: center;">Image Slider</h3>
-        </div>
+        <h3 style="display: flex; justify-content: center;">Image Slider</h3>
         <div class="image-silderlayover" id="image-silderlayover">
             <div class="images-container" id="imageContainer">
                 <img class="image" src="images/image1.png" alt="image1">
@@ -17,8 +15,8 @@
             </div>
         </div>
         <div class="btnContainer">
-            <button class="PreBtn" id="PrBtn" onclick="Preview()">Prev</button>
-            <button class="PreBtn" id="NtBtn" style="background-color: rgb(173, 133, 209);" onclick="Next()">Next</button>
+            <button class="PreBtn" id="PrBtn" onclick="prevSlide()">Prev</button>
+            <button class="PreBtn" id="NtBtn" style="background-color: rgb(173, 133, 209);" onclick="nextSlide()">Next</button>
         </div>
         <script src="task2.js"></script>
     </body>
