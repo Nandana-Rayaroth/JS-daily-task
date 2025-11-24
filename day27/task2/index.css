@@ -1,7 +1,10 @@
 body{
     /* background-color: rgb(41, 36, 36); */
 }
-
+@keyframes myAnimation{
+    0% {transform: translateX(0%);}
+    25% {transform: translateX(100%);}
+}
 #navBar{
     /* background-color: rgb(73, 17, 17); */
     /* background-color: aliceblue; */
@@ -36,6 +39,8 @@ body{
 .movieWrapper{
     display: flex;
     flex-direction: column;
+    animation-name: myAnimation;
+    animation-duration: 2s;
 }
 .movieTitle{
     font-size: 30px;
@@ -68,10 +73,16 @@ body{
 
 #ThrillerMovieContainer{
     display: none;
+    animation-name: myAnimation;
+    animation-duration: 2s;
 }
 #HorrorMovieContainer{
     display: none;
+    animation-name: myAnimation;
+    animation-duration: 2s;
 }
 #ComedyMovieContainer{
     display: none;
+    animation-name: myAnimation;
+    animation-duration: 2s;
 }
