@@ -1,0 +1,39 @@
+
+@keyframes myAnimation{
+    form {background-color: wheat;}
+    to {background-color: rgb(210, 227, 243);}
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: cursive;
+}
+.modal-container{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+.modal-wrapper{
+    height: 200px;
+    width: 400px;
+    /* background-color: rgb(210, 227, 243); */
+    background-color: wheat;
+    animation-name: myAnimation;
+    animation-duration: 4s;
+    border-radius: 14px;
+    box-shadow: 2px 2px 2px grey;
+    padding: 0px 20px;
+}
+.modal-head{
+    position: relative;
+    color: rgb(16, 12, 231);
+}
+.closeicon{
+    position: absolute;
+    right: 0px;
+    top: 2%;
+}
+.psection{
+    margin: 8% 0% 0% 0%;
+    
+}

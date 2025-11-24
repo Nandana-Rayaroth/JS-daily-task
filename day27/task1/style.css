@@ -1,0 +1,34 @@
+
+
+.notificationBar{
+    display: flex;
+    flex-direction: column;
+}
+.notificationContainer{
+    float: right;
+    width: 25%;
+    height: 100%;
+    background-color: beige;
+}
+.notificationLay{
+    height: 100px;
+    background-color: antiquewhite;
+    position: relative;
+    padding: 8px 12px;
+    border-radius: 14px;
+    box-shadow: 4px 4px 2px lightslategrey;
+}
+h3{
+    margin: 8px 4px;
+    
+}
+.closeicon{
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 12px;
+    right: 8px;
+}
+.notificationContent{
+    padding-top: 8px;
+}
