@@ -1,17 +1,24 @@
-function SelectionSort(arr){
-    let sample = [...arr]
-    let result = []
-    for(let i = 0; i < arr.length; i++){ 
-        let min = Math.min(...sample);
-        result.push(min)
-        sample.splice(sample.lastIndexOf(min), 1)
+"use strict";
+var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
     }
-    console.log(result);
+    return to.concat(ar || Array.prototype.slice.call(from));
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SelectionSort = SelectionSort;
+function SelectionSort(arr) {
+    if (arr.length === 0)
+        return "Invalid input";
+    var sample = __spreadArray([], arr, true);
+    var result = [];
+    for (var i = 0; i < arr.length; i++) {
+        var min = Math.min.apply(Math, sample);
+        result.push(min);
+        sample.splice(sample.lastIndexOf(min), 1);
+    }
+    return result;
 }
-SelectionSort([7, 12, 9, 11, 3])
-SelectionSort([81, 54, 32, 1, 98, 43]);
-SelectionSort([43, 54, 90, 100, 12, 2, 0, 190]);
-SelectionSort([980, 234, 2142, 5432, 123, 9834]);
-SelectionSort([12, 34, 54, 76, 89]);
-SelectionSort([90, 86, 56, 34, 12, 5]);
-SelectionSort([124, 452, 5234, 123, 34]);
