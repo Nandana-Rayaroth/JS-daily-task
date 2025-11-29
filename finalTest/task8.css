@@ -1,0 +1,17 @@
+
+/* .OverLay{
+    border: 1px solid black;
+} */
+.InputBar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+.OveralText{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
